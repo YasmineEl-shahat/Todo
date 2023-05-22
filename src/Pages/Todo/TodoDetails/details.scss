@@ -1,0 +1,26 @@
+@import "../../../styles/abstracts/variables.scss";
+@import "../../../styles/abstracts/mixins.scss";
+
+.details-container {
+  @include centering;
+  .details-content {
+    @include flexCenter;
+    margin-top: 20px;
+  }
+}
+
+p {
+  width: 100%;
+  max-width: 600px;
+  padding: 20px;
+  border: 2px solid $gray;
+  border-radius: $globalRadius;
+  font-size: $MediumFont;
+  white-space: pre-wrap;
+}
+
+.details-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}

@@ -1,0 +1,54 @@
+@import "../../styles/abstracts/variables.scss";
+@import "../../styles/abstracts/mixins.scss";
+
+.home-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .create-todo-button {
+    display: block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: $primary;
+    color: #fff;
+    border-radius: $globalRadius;
+    box-shadow: $shadowGlob;
+    text-align: center;
+    text-decoration: none;
+    font-size: $smallFont;
+
+    &:hover {
+      background-color: darken($primary, 10%);
+    }
+  }
+
+  .todo-list {
+    @include flexCenter;
+    .todo-item {
+      @include flexBet;
+      min-width: 50vw;
+      margin: 10px;
+      padding: 10px;
+      background-color: $gray;
+      color: #fff;
+      border-radius: $globalRadius;
+      box-shadow: $shadowGlob;
+      .todo-content {
+        font-size: $MediumFont;
+      }
+
+      .todo-date {
+        font-size: $smallFont;
+      }
+    }
+  }
+  @include mQ(768px) {
+    .todo-item {
+      width: 100%;
+    }
+    .create-todo-button {
+      margin-top: 40px;
+    }
+  }
+}

@@ -1,0 +1,41 @@
+@import "../abstracts/variables.scss";
+@import "../abstracts/mixins.scss";
+
+textarea {
+  width: 100%;
+  height: 30vh;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 2px solid $gray;
+  font-size: $MediumFont;
+  resize: none;
+
+  &:focus {
+    outline: none;
+    border-color: $primary;
+  }
+}
+button {
+  padding: 10px 20px;
+  background-color: $primary;
+  color: #fff;
+  border: none;
+  border-radius: $globalRadius;
+  box-shadow: $shadowGlob;
+  text-align: center;
+  font-size: $smallFont;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: darken($primary, 10%);
+  }
+}
+button[type="submit"] {
+  float: right;
+}
+button:disabled {
+  background-color: #ccc;
+  color: #666;
+  cursor: not-allowed;
+}
